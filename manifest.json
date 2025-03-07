@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Bionic Reader",
+  "name": "Bionic Reader - Plugin",
   "version": "1.0",
-  "default_locale": "en",
+
   "description": "Transforms web page text into Bionic Reading format to improve reading speed and comprehension",
   "permissions": ["activeTab", "scripting", "storage"],
   "action": {
