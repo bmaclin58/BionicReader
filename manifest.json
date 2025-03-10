@@ -1,29 +1,44 @@
 {
-  "manifest_version": 3,
-  "name": "Bionic Reader - Plugin",
-  "version": "1.0",
-
-  "description": "Transforms web page text into Bionic Reading format to improve reading speed and comprehension",
-  "permissions": ["activeTab", "scripting", "storage"],
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
+    "manifest_version": 3,
+    "name": "Bionic Reader",
+    "version": "1.0",
+    "description": "Transforms web page text into Bionic Reading format to improve reading speed and comprehension",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
       "16": "images/16x16.png",
       "48": "images/48x48.png",
       "128": "images/128x128.png"
     }
   },
-  "author": "Brian Maclin",
   "icons": {
     "16": "images/16x16.png",
     "48": "images/48x48.png",
     "128": "images/128x128.png"
   },
-  "content_scripts": [
+   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "css": ["bionic.css"]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "bionic.css"
+      ],
+      "run_at": "document_idle"
     }
-  ]
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
 }

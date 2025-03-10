@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Bionic Reader</title>
   <style>
@@ -8,9 +9,11 @@
       padding: 10px;
       font-family: Arial, sans-serif;
     }
+
     .slider-container {
       margin: 15px 0;
     }
+
     button {
       width: 100%;
       padding: 8px;
@@ -21,20 +24,24 @@
       cursor: pointer;
       margin-top: 10px;
     }
+
     button:hover {
       background-color: #006cc1;
     }
+
     .switch {
       position: relative;
       display: inline-block;
       width: 60px;
       height: 34px;
     }
+
     .switch input {
       opacity: 0;
       width: 0;
       height: 0;
     }
+
     .slider {
       position: absolute;
       cursor: pointer;
@@ -46,6 +53,7 @@
       transition: .4s;
       border-radius: 34px;
     }
+
     .slider:before {
       position: absolute;
       content: "";
@@ -57,18 +65,29 @@
       transition: .4s;
       border-radius: 50%;
     }
-    input:checked + .slider {
+
+    input:checked+.slider {
       background-color: #0078d7;
     }
-    input:checked + .slider:before {
+
+    input:checked+.slider:before {
       transform: translateX(26px);
+    }
+
+    .status {
+      font-size: 12px;
+      font-style: italic;
+      color: #555;
+      margin-top: 8px;
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
   <h2>Bionic Reader</h2>
-  <p>Toggle to enable/disable Bionic Reading on this page.</p>
-  
+  <p>Toggle to enable/disable Bionic Reading on all pages.</p>
+
   <div style="display: flex; justify-content: space-between; align-items: center;">
     <span>Enable Bionic Reading:</span>
     <label class="switch">
@@ -76,15 +95,18 @@
       <span class="slider"></span>
     </label>
   </div>
-  
+
   <div class="slider-container">
     <label for="boldRatio">Bold Ratio (%):</label>
-    <input type="range" id="boldRatio" min="30" max="70" value="40">
+    <input type="range" id="boldRatio" min="30" max="70" value="50">
     <span id="boldRatioValue">50%</span>
   </div>
-  
-  <button id="applyBtn">Apply to Current Page</button>
-  
+
+  <button id="applyBtn">Apply Ratio to Page</button>
+
+  <p class="status">Bionic Reading will be applied to all pages by default</p>
+
   <script src="popup.js"></script>
 </body>
+
 </html>
