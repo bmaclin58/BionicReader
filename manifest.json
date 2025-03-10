@@ -2,7 +2,8 @@
     "manifest_version": 3,
     "name": "Bionic Reader",
     "version": "1.0",
-    "description": "Transforms web page text into Bionic Reading format to improve reading speed and comprehension",
+    "author": "Brian Maclin",
+    "description": "Transforms web page text into Bionic Reading format to improve reading speed and comprehension.",
     "permissions": [
       "activeTab",
       "scripting",
