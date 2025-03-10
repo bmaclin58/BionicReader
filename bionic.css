@@ -2,8 +2,3 @@
   font-weight: bold;
   color: inherit;
 }
-
-/* Add a class for pages with bionic reading active */
-body.bionic-active {
- border-color: red;
-}
